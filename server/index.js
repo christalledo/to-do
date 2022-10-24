@@ -5,6 +5,8 @@ const cors = require('cors');
 /*Initialize Express server*/
 const app = express();
 
+app.use('/api', './routes/api');
+
 const db = require('./db/server.js');
 db.mongoose
     .connect(db.url, {
