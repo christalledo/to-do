@@ -7,7 +7,8 @@ const listSchema = new Schema ({
     },
     description: {
         type: String,
-
+        maxlength: 50,
+      minlength: 5,
     },
     assigned: {
         type: String,
@@ -15,6 +16,9 @@ const listSchema = new Schema ({
     important: {
         type: String,
         required: true,
+    },
+    done: {
+        type: Boolean
     },
     user_id: {
         type: String,
