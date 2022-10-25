@@ -12,7 +12,7 @@ const listSchema = new Schema ({
     assigned: {
         type: String,
     },
-    impotance: {
+    important: {
         type: String,
         required: true,
     },
