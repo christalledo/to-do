@@ -20,7 +20,8 @@ const userSchema = new Schema({
     },
     todo: [
         {
-            
+            type: Schema.Types.Object,
+            ref: "List",
         }
     ]
 });
