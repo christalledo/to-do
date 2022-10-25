@@ -24,7 +24,13 @@ const userSchema = new Schema({
             ref: "List",
         }
     ]
-});
+    },
+    // {
+    //     toJSON: {
+          
+    //     },
+    // }
+);
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
