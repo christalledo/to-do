@@ -25,6 +25,9 @@ const typeDefs = gql`
     createList(_id: ID!, assigned: String!) : List
     deleteList(_id: ID!, assigned: String! ) : List
     updateList(_id: ID!, assigned: String!) : List
+    createToDo(todo: String!) : User
+    updatedToDo(todo: String!) : User
+    deletedToDo(todo: String!) : User
   }
 `;
 

@@ -16,10 +16,13 @@ export const QUERY_LIST = gql`
 `;
 
 export const QUERY_USER = gql`
-  query matchups($_id: String) {
-    matchups(_id: $_id) {
-      _id
-     
-    }
+  query User($id: ID!) {
+  user(_id: $id) {
+    _id
+    username
+    email
+    password
+    todo
   }
+}
 `;
