@@ -1,4 +1,4 @@
- /*Import project dependencies*/
+/*Import project dependencies*/
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -25,7 +25,7 @@ db.mongoose
 var corsOptions = {
     origin: 'http://localhost:4000'
 }
-app.use(cors(bodyOptions));
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 /*Create default route*/
@@ -39,3 +39,4 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Server running on port: ${PORT}`);
 });
+
