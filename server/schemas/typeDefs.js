@@ -10,7 +10,6 @@ const typeDefs = gql`
     done: Boolean!
     user_id: String!
   }
-
   type User {
     _id: ID!
     username: String!
@@ -18,14 +17,14 @@ const typeDefs = gql`
     password: String!
     todo: Object!
   }
-
   type Query {
-    list: [Tech]
-    User(_id: String): [User]
+    list: [List]
+    User(_id: ID!): [User]
   }
-
   type Mutation {
-    
+    createList(_id: ID!, assigned: String!)
+    deleteList(_id: ID!, assigned: String! )
+    updateList(_id: ID!, assigned: String!)
   }
 `;
 
