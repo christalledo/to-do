@@ -16,7 +16,7 @@ function TodoList() {
 
 
       
-     const updateTodo = (todoId, mewValue) => {
+     const updateTodo = (todoId, newValue) => {
       if (!newValue.text || /^\s*$/.test(newValue.text)) {
         return;                                
         } 
