@@ -1,14 +1,45 @@
 [
     {
-        "name": "cooking"
+        "name": "cooking",
+        "description": "We are going to cook rice and meat.",
+        "assigned": "mom",
+        "important": "High",
+        "done": true
     },
     {
-        "name": "laundry"
+        "name": "laundry",
+        "description": "Do every ones laundry",
+        "assigned": "son",
+        "important": "low",
+        "done": false
     },
     {
-        "name": "cleaning"
+        "name": "cleaning",
+        "description": "clean the kitchen  and both bathroom",
+        "assigned": "daughter",
+        "important": "High",
+        "done": false
     },
     {
-        "name": "homework"
+        "name": "homework",
+        "description": "math and science homework",
+        "assigned": "son",
+        "important": "High",
+        "done": true
+    },
+    {
+        "name": "meal prep",
+        "description": "get the container and meals ready and make a smoothe",
+        "assigned": "mom",
+        "important": "medium",
+        "done": false
+
+    },
+    {
+        "name": "shopping",
+        "description": "buy some cothes and shoes for the kids",
+        "assigned": "dad",
+        "important": "low",
+        "done": true
     }
 ]
