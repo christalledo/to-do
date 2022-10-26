@@ -1,6 +1,6 @@
-const { Schema } = require("mongoose");
+const { Schema, model, SchemaTypeOptions } = require("mongoose");
 
-const listSchema = new Schema ({
+const listSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -8,7 +8,7 @@ const listSchema = new Schema ({
     description: {
         type: String,
         maxlength: 50,
-      minlength: 5,
+        minlength: 5,
     },
     assigned: {
         type: String,
@@ -21,7 +21,8 @@ const listSchema = new Schema ({
         type: Boolean
     },
     user_id: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "User"
     }
 })
 

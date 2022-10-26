@@ -2,10 +2,10 @@ const { List, User } = require('../models');
 
 const resolvers = {
     Query: {
-        User: async () => {
+        user: async () => {
             return User.find({});
         },
-        List: async () => {
+        list: async () => {
             return List.find({})
         },
     },
@@ -19,7 +19,7 @@ const resolvers = {
             return deletedList;
         },
         updateList: async (parent, args) => {
-            const updatedList = await List.delete(args);
+            const updatedList = await List.update(args);
             return updatedList;
         }
     },
