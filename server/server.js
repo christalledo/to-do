@@ -1,19 +1,10 @@
 
-const mongoose = require('mongoose');
-mongoose.Promsie = global.Promise;
-const db = {};
-db.mongoose = mongoose;
-db.url = 'mongodb://localhost:27017/todo';
-db.models = require('./model.js');
-module.exports = db;
-
-
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-// const { authMiddleware } = require('./utils/auth');
+const { authMiddleware } = require('./utils/auth');
 
-// const { typeDefs, resolvers } = require('./schemas');
+const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
