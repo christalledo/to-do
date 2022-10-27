@@ -15,6 +15,8 @@ export const QUERY_LIST = gql`
 
 `;
 
+
+
 export const QUERY_USER = gql`
   query User($id: ID!) {
   user(_id: $id) {

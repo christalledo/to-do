@@ -17,6 +17,12 @@ const typeDefs = gql`
     password: String
     todo: String!
   }
+  
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
     list: [List]
     user(_id: ID!): [User]
@@ -28,7 +34,10 @@ const typeDefs = gql`
     createToDo(todo: String!) : User
     updatedToDo(todo: String!) : User
     deletedToDo(todo: String!) : User
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
   }
 `;
+
 
 module.exports = typeDefs;
