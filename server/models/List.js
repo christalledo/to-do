@@ -7,7 +7,7 @@ const listSchema = new Schema({
     },
     description: {
         type: String,
-        maxlength: 50,
+        maxlength: 100,
         minlength: 5,
     },
     assigned: {
