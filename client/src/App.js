@@ -1,7 +1,7 @@
 import './index.css';
 // import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Login from './pages/login'
+import Login from './pages/Login';
 
 const client = new ApolloClient({
   uri: '/graphql',

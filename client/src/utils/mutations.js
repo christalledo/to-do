@@ -12,20 +12,28 @@ export const LOGIN_USER = gql`
   }
 `;
 
-// export const CREATE_NAME = gql`
-//   mutation createName($: String!, $: String!) {
-//     createMatchup() {
-//       _id
-      
-//     }
-//   }
-// `;
+export const MUTATION = gql`mutation CreateList($id: ID!, $assigned: String!) {
+  createList(_id: $id, assigned: $assigned) {
+    _id
+    name
+    description
+    assigned
+    important
+    done
+    user_id
+  }
+}
+`;
 
-// export const CREATE_VOTE = gql`
-//   mutation createName($_id: String!, $: Int!) {
-//     createVote(_id: $_id, techNum: $techNum) {
-//       _id
-      
-//     }
-//   }
-// `;
+export const MUTATION = gql`mutation CreateList($id: ID!, $assigned: String!) {
+  createList(_id: $id, assigned: $assigned) {
+    _id
+    name
+    description
+    assigned
+    important
+    done
+    user_id
+  }
+}
+`;
