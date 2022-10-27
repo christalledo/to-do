@@ -25,7 +25,7 @@ export const MUTATION = gql`mutation CreateList($id: ID!, $assigned: String!) {
 }
 `;
 
-export const MUTATION = gql`mutation CreateList($id: ID!, $assigned: String!) {
+export const MUTATION_C  = gql`mutation CreateList($id: ID!, $assigned: String!) {
   createList(_id: $id, assigned: $assigned) {
     _id
     name
