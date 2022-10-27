@@ -12,4 +12,28 @@ export const LOGIN_USER = gql`
   }
 `;
 
-export const Mutation;
+export const MUTATION = gql`mutation CreateList($id: ID!, $assigned: String!) {
+  createList(_id: $id, assigned: $assigned) {
+    _id
+    name
+    description
+    assigned
+    important
+    done
+    user_id
+  }
+}
+`;
+
+export const MUTATION = gql`mutation CreateList($id: ID!, $assigned: String!) {
+  createList(_id: $id, assigned: $assigned) {
+    _id
+    name
+    description
+    assigned
+    important
+    done
+    user_id
+  }
+}
+`;
