@@ -53,7 +53,7 @@ export const MUTATION_UPDATE_LIST = gql`mutation UpdateList($id: ID!, $assigned:
 }
 `;
 
-export const MUTATION_CREATE_TODO = gql`($userId: ID!, $todo: String!) {
+export const MUTATION_CREATE_TODO = gql`mutation createToDo($userId: ID!, $todo: String!) {
   createToDo(user_id: $userId, todo: $todo) {
     _id
     username
@@ -64,7 +64,7 @@ export const MUTATION_CREATE_TODO = gql`($userId: ID!, $todo: String!) {
 }
 `;
 
-export const MUTATION_DELETE_TODO = gql`($userId: ID!, $todo: String!) {
+export const MUTATION_DELETE_TODO = gql`mutation Delet($userId: ID!, $todo: String!) {
   deleteToDo(user_id: $userId, todo: $todo) {
     _id
     username
@@ -86,7 +86,7 @@ export const MUTATION_UPDATE_TODO = gql`($userId: ID!, $todo: String!) {
 }
 `;
 
-export const MUTATION_ADD_USER = gql`($username: String!, $email: String!, $password: String!) {
+export const ADD_USER = gql`($username: String!, $email: String!, $password: String!) {
   addUser(username: $username, email: $email, password: $password) {
     token
     user {
