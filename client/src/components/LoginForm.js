@@ -8,10 +8,12 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const LoginForm = ({error, onSubmit, userFormData, setUserFormData}) => {
+//({error, onSubmit, userFormData, setUserFormData})
+const LoginForm = ()  => {
   
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
 
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -49,7 +51,6 @@ const LoginForm = ({error, onSubmit, userFormData, setUserFormData}) => {
       console.error(e);
     }
 
-    // clear form values
     setUserFormData({
       email: '',
       password: '',
@@ -57,7 +58,7 @@ const LoginForm = ({error, onSubmit, userFormData, setUserFormData}) => {
   };
   return (
     <>
-      <Form noValidate validated={validated} onSubmit={onSubmit}>
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
           onClose={() => setShowAlert(false)}
