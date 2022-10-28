@@ -21,7 +21,7 @@ query Todo {
     action
   }
 }
-`
+`;
 
 export const QUERY_USER = gql`
   query User($id: ID!) {
