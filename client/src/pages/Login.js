@@ -5,6 +5,7 @@ import { LOGIN_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 import LoginForm from "../components/LoginForm";
+import SignupForm from "../components/SignupForm";
 
 const Login = (props) => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
@@ -42,6 +43,7 @@ const Login = (props) => {
   return (
     <main className="flex-row justify-center mb-4">
     <LoginForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
+    <SignupForm/>
     </main>
   );
 };

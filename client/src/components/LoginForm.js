@@ -8,7 +8,6 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-//({error, onSubmit, userFormData, setUserFormData})
 const LoginForm = ()  => {
   
   const [validated] = useState(false);

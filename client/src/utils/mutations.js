@@ -85,7 +85,7 @@ export const MUTATION_UPDATE_TODO = gql`mutation updateToDo($userId: ID!, $todo:
 }
 `;
 
-export const MUTATION_ADD_USER = gql`mutation addUser($username: String!, $email: String!, $password: String!) {
+export const ADD_USER = gql`mutation addUser($username: String!, $email: String!, $password: String!) {
   addUser(username: $username, email: $email, password: $password) {
     token
     user {
