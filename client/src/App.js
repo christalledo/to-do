@@ -1,5 +1,5 @@
 import './index.css';
-// import TodoForm from './components/TodoForm';
+import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Login from './pages/Login';
 

@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ } from '../utils/queries';
 
+import {
+  Jumbotron,
+  Container,
+  CardColumns,
+  Card,
+  Button,
+} from 'react-bootstrap';
+
 import Auth from "../utils/auth";
 import {LoginForm} from "../components/LoginForm";
 

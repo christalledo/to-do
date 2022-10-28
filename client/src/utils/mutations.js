@@ -13,7 +13,7 @@ export const LOGIN_USER = gql`
 `;
 
 
-export const MUTATION_CREATE_LIST  = gql`mutation CreateList($id: ID!, $assigned: String!) {
+export const CREATE_LIST  = gql`mutation CreateList($id: ID!, $assigned: String!) {
   createList(_id: $id, assigned: $assigned) {
     _id
     name
@@ -26,7 +26,7 @@ export const MUTATION_CREATE_LIST  = gql`mutation CreateList($id: ID!, $assigned
 }
 `;
 
-export const MUTATION_DELETE_LIST = gql`mutation DeleteList($id: ID!, $assigned: String!) {
+export const DELETE_LIST = gql`mutation DeleteList($id: ID!, $assigned: String!) {
   deleteList(_id: $id, assigned: $assigned) {
     _id
     name
@@ -39,7 +39,7 @@ export const MUTATION_DELETE_LIST = gql`mutation DeleteList($id: ID!, $assigned:
 }
 `;
 
-export const MUTATION_UPDATE_LIST = gql`mutation UpdateList($id: ID!, $assigned: String!) {
+export const UPDATE_LIST = gql`mutation UpdateList($id: ID!, $assigned: String!) {
   updateList(_id: $id, assigned: $assigned) {
     _id
     name
@@ -52,7 +52,7 @@ export const MUTATION_UPDATE_LIST = gql`mutation UpdateList($id: ID!, $assigned:
 }
 `;
 
-export const MUTATION_CREATE_TODO = gql`mutation creatTodo($userId: ID!, $todo: String!) {
+export const CREATE_TODO = gql`mutation creatTodo($userId: ID!, $todo: String!) {
   createToDo(user_id: $userId, todo: $todo) {
     _id
     username
@@ -63,7 +63,7 @@ export const MUTATION_CREATE_TODO = gql`mutation creatTodo($userId: ID!, $todo: 
 }
 `;
 
-export const MUTATION_DELETE_TODO = gql`mutation deleteToDo($userId: ID!, $todo: String!) {
+export const DELETE_TODO = gql`mutation deleteToDo($userId: ID!, $todo: String!) {
   deleteToDo(user_id: $userId, todo: $todo) {
     _id
     username
@@ -74,7 +74,7 @@ export const MUTATION_DELETE_TODO = gql`mutation deleteToDo($userId: ID!, $todo:
 }
 `;
 
-export const MUTATION_UPDATE_TODO = gql`mutation updateToDo($userId: ID!, $todo: String!) {
+export const UPDATE_TODO = gql`mutation updateToDo($userId: ID!, $todo: String!) {
   updateToDo(user_id: $userId, todo: $todo) {
     _id
     username
@@ -96,7 +96,7 @@ export const ADD_USER = gql`mutation addUser($username: String!, $email: String!
 }
 `;
 
-export const MUTATION_LOGIN = gql`mutation login($email: String!, $password: String!) {
+export const LOGIN = gql`mutation login($email: String!, $password: String!) {
   login(email: $email, password: $password) {
     token
     user {
