@@ -96,8 +96,20 @@ export const ADD_USER = gql`mutation addUser($username: String!, $email: String!
 }
 `;
 
-export const LOGIN = gql`mutation login($email: String!, $password: String!) {
-  login(email: $email, password: $password) {
+export const LOGOUT = gql`mutation logout($email: String!, $password: String!) {
+  logout(email: $email, password: $password) {
+    token
+    user {
+      _id
+      username
+      
+    }
+  }
+}
+`;
+
+export const SIGNUP = gql`mutation SIGNUP($email: String!, $password: String!) {
+  signup(email: $email, password: $password) {
     token
     user {
       _id

@@ -1,14 +1,14 @@
 // see SignupForm.js for comments
 
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Card } from 'react-bootstrap';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const LoginForm = ()  => {
+ const LoginForm = ()  => {
   
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -57,6 +57,8 @@ const LoginForm = ()  => {
   };
   return (
     <>
+  <h2>Login</h2>
+
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -96,8 +98,7 @@ const LoginForm = ()  => {
           </Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(userFormData.email && userFormData.password)}
-          type="submit"
+        type="submit"
           variant="success"
         >
           Submit
