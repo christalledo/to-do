@@ -1,5 +1,7 @@
 import React, {useState} from 'react' 
 import TodoForm from './TodoForm'
+import Todo from './Todo'
+import {Link } from 'react-router-dom'
 
 function TodoList() {
     const [todos, setTodos] = useState([]);
@@ -50,8 +52,13 @@ function TodoList() {
       <h1> What are we doing today?</h1>
       <TodoForm onSubmit={addTodo} />
      <Todo todos={todos} completeTodo={completeTodo} removeTodo=
-     {removeTodo} updateTodo={updateTodo} />
+     {removeTodo} updateTodo={updateTodo} 
+          />
+           <Link to="/home">
+          <button className="btn btn-lg btn-danger">Go back to home!</button>
+        </Link>
     </div>
+
   );
 }
 
