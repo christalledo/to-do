@@ -107,3 +107,17 @@ export const LOGIN = gql`mutation login($email: String!, $password: String!) {
   }
 }
 `;
+
+export const SIGNUP = gql`mutation Signup($email: String!, $password: String!, $userid: ID) {
+  signup(email: $email, password: $password) {
+    token
+    user {
+      _id
+      username
+      password
+      email
+      
+    }
+  }
+}
+`;

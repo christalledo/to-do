@@ -2,6 +2,8 @@ import './index.css';
 import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Login from './pages/Login';
+import Footer from '../../../../2-full-stack-application/Footer';
+
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -14,7 +16,9 @@ function App() {
 
    
     <div className='todo-app'>
-      <Login  />    
+      <Login  />  
+      <Footer />  
+      <TodoForm />
     </div>
     </ApolloProvider>
   );

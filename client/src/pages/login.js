@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
 import LoginForm from "../components/LoginForm";
 import SignupForm from "../components/SignupForm";
+//import Footer from "../components/Footer";
 
 const Login = (props) => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
@@ -44,6 +45,8 @@ const Login = (props) => {
     <main className="flex-row justify-center mb-4">
     <LoginForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
     <SignupForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
+   
+    
     </main>
   );
 };

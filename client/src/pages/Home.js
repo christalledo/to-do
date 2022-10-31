@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ } from '../utils/queries';
+import Footer from '../../../../../2-full-stack-application/Footer';
 
 import {
   Jumbotron,
@@ -32,6 +33,7 @@ const Home = () => {
           <button className="btn btn-lg btn-danger">Create To Do list!</button>
         </Link>
       </div>
+      <Footer>Getting Things Done</Footer>
     </div>
   );
 };
