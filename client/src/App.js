@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import TodoList from './components/TodoList';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 // import SignupForm from './components/SignupForm';
 const client = new ApolloClient({
@@ -36,6 +37,7 @@ function App() {
             
           </Routes>
           </div>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
