@@ -12,20 +12,110 @@ export const LOGIN_USER = gql`
   }
 `;
 
-// export const CREATE_NAME = gql`
-//   mutation createName($: String!, $: String!) {
-//     createMatchup() {
-//       _id
-      
-//     }
-//   }
-// `;
 
-// export const CREATE_VOTE = gql`
-//   mutation createName($_id: String!, $: Int!) {
-//     createVote(_id: $_id, techNum: $techNum) {
-//       _id
+export const CREATE_LIST  = gql`mutation CreateList($id: ID!, $assigned: String!) {
+  createList(_id: $id, assigned: $assigned) {
+    _id
+    name
+    description
+    assigned
+    important
+    done
+    user_id
+  }
+}
+`;
+
+export const DELETE_LIST = gql`mutation DeleteList($id: ID!, $assigned: String!) {
+  deleteList(_id: $id, assigned: $assigned) {
+    _id
+    name
+    description
+    assigned
+    important
+    done
+    user_id
+  }
+}
+`;
+
+export const UPDATE_LIST = gql`mutation UpdateList($id: ID!, $assigned: String!) {
+  updateList(_id: $id, assigned: $assigned) {
+    _id
+    name
+    description
+    assigned
+    important
+    done
+    user_id
+  }
+}
+`;
+
+export const CREATE_TODO = gql`mutation creatTodo($userId: ID!, $todo: String!) {
+  createToDo(user_id: $userId, todo: $todo) {
+    _id
+    username
+    email
+    password
+    todo
+  }
+}
+`;
+
+export const DELETE_TODO = gql`mutation deleteToDo($userId: ID!, $todo: String!) {
+  deleteToDo(user_id: $userId, todo: $todo) {
+    _id
+    username
+    email
+    password
+    todo
+  }
+}
+`;
+
+export const UPDATE_TODO = gql`mutation updateToDo($userId: ID!, $todo: String!) {
+  updateToDo(user_id: $userId, todo: $todo) {
+    _id
+    username
+    email
+    password
+    todo
+  }
+}
+`;
+
+export const ADD_USER = gql`mutation addUser($username: String!, $email: String!, $password: String!) {
+  addUser(username: $username, email: $email, password: $password) {
+    token
+    user {
+      _id
+      username
+    }
+  }
+}
+`;
+
+export const LOGOUT = gql`mutation logout($email: String!, $password: String!) {
+  logout(email: $email, password: $password) {
+    token
+    user {
+      _id
+      username
       
-//     }
-//   }
-// `;
+    }
+  }
+}
+`;
+
+export const SIGNUP = gql`mutation SIGNUP($email: String!, $password: String!) {
+  signup(email: $email, password: $password) {
+    token
+    user {
+      _id
+      username
+      
+    }
+  }
+}
+`;

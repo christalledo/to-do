@@ -1,17 +1,20 @@
 // see SignupForm.js for comments
 
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Card } from 'react-bootstrap';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const LoginForm = ({error, onSubmit, userFormData, setUserFormData}) => {
+ const LoginForm = ()  => {
   
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+
+  const [login, { error }] = useMutation(LOGIN_USER);
 
 
   useEffect(() => {
@@ -26,9 +29,37 @@ const LoginForm = ({error, onSubmit, userFormData, setUserFormData}) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    try {
+      const { data } = await login({
+        variables: { ...userFormData },
+      });
+
+      console.log(data);
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    setUserFormData({
+      email: '',
+      password: '',
+    });
+  };
   return (
     <>
-      <Form noValidate validated={validated} onSubmit={onSubmit}>
+  <h2>Login</h2>
+
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
           onClose={() => setShowAlert(false)}
@@ -67,8 +98,7 @@ const LoginForm = ({error, onSubmit, userFormData, setUserFormData}) => {
           </Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(userFormData.email && userFormData.password)}
-          type="submit"
+        type="submit"
           variant="success"
         >
           Submit

@@ -15,7 +15,13 @@ export const QUERY_LIST = gql`
 
 `;
 
-
+export const QUERY_TODOS = gql`
+query Todo {
+  todo {
+    action
+  }
+}
+`;
 
 export const QUERY_USER = gql`
   query User($id: ID!) {

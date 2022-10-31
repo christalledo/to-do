@@ -1,4 +1,7 @@
-const { List, User } = require('../models');
+const { List, User, Todo } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
+
 
 const resolvers = {
     Query: {
@@ -9,7 +12,7 @@ const resolvers = {
             return List.find({});
         },
         todo: async () => {
-            return todo.find({});
+            return Todo.find({});
         },
     },
     Mutation: {
@@ -26,20 +29,22 @@ const resolvers = {
             return updatedList;
         },
         createToDo: async (parent, args) => {
-            const toDoList = await todo.create(args);
+            const toDoList = await Todo.create(args);
             return toDoList;
         },
         deleteToDo: async (parent, args) => {
-            const deletedToDoList = await todo.delete(args);
+            const deletedToDoList = await Todo.delete(args);
             return deletedToDoList;
         },
         updateToDo: async (parent, args) => {
-            const updatedToDoList = await todo.post(args);
+            const updatedToDoList = await Todo.post(args);
             return updatedToDoList;
         },
         addUser: async (parent, { username, email, password }) => {
             const user = await User.create({ username, email, password });
             const token = signToken(user);
+            console.log(user)
+            console.log(token)
             return { token, user };
         },
         login: async (parent, { email, password }) => {

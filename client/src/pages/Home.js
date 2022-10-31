@@ -1,9 +1,20 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_ } from '../utils/queries';
+import { QUERY_LIST } from '../utils/queries';
+
+// import {
+//   Jumbotron,
+//   Container,
+//   CardColumns,
+//   Card,
+//   Button,
+// } from 'react-bootstrap';
+
+// import Auth from "../utils/auth";
+// import {LoginForm} from "../components/LoginForm";
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_, {
+  const { loading, data, } = useQuery(QUERY_LIST, {
     fetchPolicy: "no-cache"
   });
 
@@ -17,7 +28,7 @@ const Home = () => {
      
       <div className="card-footer text-center m-3">
         <h2>Ready to create Your To Do List?</h2>
-        <Link to="/matchup">
+        <Link to="/todo">
           <button className="btn btn-lg btn-danger">Create To Do list!</button>
         </Link>
       </div>
