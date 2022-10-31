@@ -46,15 +46,4 @@ function App() {
 
 export default App;
 
-// function App() {
-//   return (
-//     <ApolloProvider client={client}>
 
-   
-//     <div className='todo-app'>
-//       <Login  />    
-//       <Home />
-//          </div>
-         
-         
-//     </ApolloProvider>
