@@ -1,8 +1,10 @@
 import './index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Login from './pages/Login';
-
+import Home from './pages/Home';
+// import SignupForm from './components/SignupForm';
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
@@ -11,13 +13,36 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-
-   
-    <div className='todo-app'>
-      <Login  />    
-    </div>
+      <Router>
+        <div className="flex-column justify-center align-center min-100-vh bg-primary">
+          <Routes>
+            <Route 
+              path="/" 
+              element={<Login />}
+            />
+            <Route 
+              path="/Home" 
+              element={<Home />}
+            />
+            
+          </Routes>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
 
 export default App;
+
+// function App() {
+//   return (
+//     <ApolloProvider client={client}>
+
+   
+//     <div className='todo-app'>
+//       <Login  />    
+//       <Home />
+//          </div>
+         
+         
+//     </ApolloProvider>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_ } from '../utils/queries';
+import { QUERY_LIST } from '../utils/queries';
 
 import {
   Jumbotron,
@@ -14,7 +14,7 @@ import Auth from "../utils/auth";
 import {LoginForm} from "../components/LoginForm";
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_, {
+  const { loading, data, } = useQuery(QUERY_LIST, {
     fetchPolicy: "no-cache"
   });
 
