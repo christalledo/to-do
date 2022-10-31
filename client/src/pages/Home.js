@@ -28,7 +28,7 @@ const Home = () => {
      
       <div className="card-footer text-center m-3">
         <h2>Ready to create Your To Do List?</h2>
-        <Link to="/matchup">
+        <Link to="/todo">
           <button className="btn btn-lg btn-danger">Create To Do list!</button>
         </Link>
       </div>

@@ -4,6 +4,7 @@ import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import TodoList from './components/TodoList';
 // import SignupForm from './components/SignupForm';
 const client = new ApolloClient({
   uri: '/graphql',
@@ -21,8 +22,12 @@ function App() {
               element={<Login />}
             />
             <Route 
-              path="/Home" 
+              path="/home" 
               element={<Home />}
+            />
+             <Route 
+              path="/todo" 
+              element={< TodoList />}
             />
             
           </Routes>
