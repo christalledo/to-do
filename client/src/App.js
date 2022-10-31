@@ -2,7 +2,7 @@ import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Login from './pages/login';
+import Login from './pages/Login';
 import Home from './pages/Home';
 import TodoList from './components/TodoList';
 import Header from './components/Header';
@@ -46,15 +46,4 @@ function App() {
 
 export default App;
 
-// function App() {
-//   return (
-//     <ApolloProvider client={client}>
 
-   
-//     <div className='todo-app'>
-//       <Login  />    
-//       <Home />
-//          </div>
-         
-         
-//     </ApolloProvider>
