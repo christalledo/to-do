@@ -61,8 +61,11 @@ const SignupForm = () => {
   };
 
   return (
+   
     <>
       {/* This is needed for the validation functionality above */}
+      <h2>Signup</h2>
+
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert
@@ -119,13 +122,7 @@ const SignupForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={
-            !(
-              userFormData.username &&
-              userFormData.email &&
-              userFormData.password
-            )
-          }
+          
           type="submit"
           variant="success"
         >
