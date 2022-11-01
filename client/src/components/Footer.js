@@ -9,16 +9,14 @@ const Footer = () => {
     <footer className="w-100 justify-content-center d-flex flex-column text-dark">
       {location.pathname !== '/' && (
           <button
-            className="btn align-self-center btn-dark "
+            className="btn align-self-center m-4 btn-dark "
             onClick={() => navigate(-1)}
           >
             &larr; Go Back
           </button>
         )}
-      <div className="justify-content-center d-flex flex-row align-items-center">
-        <div>
+      <div className="justify-content-center  text-bg-secondary d-flex flex-row align-items-center">
             <img style={styles.imageWidth} src={Logo} alt='app logo' />
-        </div>
         <h4>&copy; {new Date().getFullYear()} - TO DO LIST APP</h4>
       </div>
     </footer>
@@ -26,7 +24,8 @@ const Footer = () => {
 };
 const styles= {
   imageWidth: {
-    width: 60
+    width: 60,
+    margin: 5
   },
 }
 
