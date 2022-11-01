@@ -22,7 +22,7 @@ function App() {
           <div className='container'>
           <Routes>
             <Route 
-              path="/" 
+              path="/login" 
               element={<Login />}
             />
             <Route 
