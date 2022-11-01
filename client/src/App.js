@@ -2,7 +2,7 @@ import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Login from './pages/Login';
+import Login from './pages/login';
 import Home from './pages/Home';
 import TodoList from './components/TodoList';
 import Header from './components/Header';
@@ -23,7 +23,7 @@ function App() {
           <div className='container'>
           <Routes>
             <Route 
-              path="/" 
+              path="/login" 
               element={<Login />}
             />
             <Route 
