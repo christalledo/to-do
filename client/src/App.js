@@ -1,6 +1,5 @@
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import TodoForm from './components/TodoForm';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Login from './pages/Login';
 import Home from './pages/Home';
@@ -45,5 +44,3 @@ function App() {
 }
 
 export default App;
-
-

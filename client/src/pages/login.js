@@ -16,7 +16,6 @@ import SignupForm from "../components/SignupForm";
   // const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   // const [logout, { error }] = useMutation(LOGOUT_USER);
 
-
   // const Signup = (props) => {
   // const [userFormData, setUserFormData] = useState({username: '', email: '', password: '' });
   // const [signup, { error }] = useMutation(SIGNUP_USER);
