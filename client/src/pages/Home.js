@@ -8,8 +8,8 @@ const Home = () => {
   });
 
   return (
-    <div className="card bg-white card-rounded m-5 w-50">
-      <div className="card-header bg-secondary text-center">
+    <div className="card bg-white card-rounded m-5 w-60">
+      <div className="card-header bg-secondary text-center text-light">
         <h1>Welcome to To Do List App!</h1>
       </div>
      
