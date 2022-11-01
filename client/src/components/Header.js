@@ -28,7 +28,7 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button className="btn btn-light m-2" onClick={logout}>
                 Logout
               </button>
             </>
