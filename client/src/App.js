@@ -1,7 +1,7 @@
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Login from './pages/login';
+import Login from './pages/Login';
 import Home from './pages/Home';
 import TodoList from './components/TodoList';
 import Header from './components/Header';
