@@ -55,7 +55,7 @@ function TodoList() {
      {removeTodo} updateTodo={updateTodo} 
           />
            <Link to="/home">
-          <button className="btn btn-lg btn-danger">Go back to home!</button>
+          <button className="btn btn-lg m-3 btn-danger">Go back to home!</button>
         </Link>
     </div>
 
