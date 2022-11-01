@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+//import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
@@ -9,6 +10,21 @@ import SignupForm from "../components/SignupForm";
   const Login = (props) => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
+
+
+  // const Logout = (props) => {
+  // const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  // const [logout, { error }] = useMutation(LOGOUT_USER);
+
+
+  // const Signup = (props) => {
+  // const [userFormData, setUserFormData] = useState({username: '', email: '', password: '' });
+  // const [signup, { error }] = useMutation(SIGNUP_USER);
+ 
+
+
+
+
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -38,13 +54,9 @@ import SignupForm from "../components/SignupForm";
   };
 
   return (
-    <main className="row flex-row justify-content-center mb-4">
-      <div className=" col-5">
-        <LoginForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
-      </div>
-      <div className=" col-5">
-        <SignupForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
-      </div>
+    <main className="flex-row justify-center mb-4">
+    <LoginForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
+    <SignupForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
     </main>
   );
 };
