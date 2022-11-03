@@ -25,7 +25,7 @@ const Footer = () => {
 const styles= {
   imageWidth: {
     width: 60,
-    margin: 5
+    margin: 7
   },
 }
 
