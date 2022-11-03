@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="w-100 justify-content-center d-flex flex-column text-dark">
       {location.pathname !== '/' && (
           <button
-            className="btn align-self-center m-4 btn-dark "
+            className="btn align-self-center m-2 btn-dark "
             onClick={() => navigate(-1)}
           >
             &larr; Go Back
