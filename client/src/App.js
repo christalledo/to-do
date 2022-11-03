@@ -7,7 +7,6 @@ import TodoList from './components/TodoList';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// import SignupForm from './components/SignupForm';
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
@@ -29,11 +28,10 @@ function App() {
               path="/home" 
               element={<Home />}
             />
-             <Route 
+            <Route 
               path="/todo" 
               element={< TodoList />}
             />
-            
           </Routes>
           </div>
           <Footer />
