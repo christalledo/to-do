@@ -38,7 +38,7 @@ import SignupForm from "../components/SignupForm";
   };
 
   return (
-    <main className="row flex-row justify-content-center h-350 mb-4">
+    <main className="row flex-row justify-content-center ">
       <div className=" col-4 m-3">
         <LoginForm error={error} onSubmit={handleFormSubmit} userFormData={userFormData} setUserFormData={setUserFormData}/>
       </div>
