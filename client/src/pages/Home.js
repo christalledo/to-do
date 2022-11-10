@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_LIST } from '../utils/queries';
 
 const Home = () => {
+  // eslint-disable-next-line
   const { data } = useQuery(QUERY_LIST, {
     fetchPolicy: "no-cache"
   });
